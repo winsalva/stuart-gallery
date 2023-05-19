@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/logo-removebg-preview.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+
+    <title>Bidder - Stuart Gallery</title>
+
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar-expand-lg {
+          background-color: #fefae0;
+          margin: 0;
+          padding: 0;
+        }
+
+        .container-fluid {
+          background-color: #edede9;
+         
+        }
+
+        .navbar-collapse :hover {
+           color: #fb8500;
+           
+        }
+
+        .navbar-collapse :active {
+           color: #fb8500;
+           
+        }
+
+        btn-dark {
+          padding: 10;
+        }
+
+        .gap-2 :hover{
+              color: #f5f5f5;
+             background-color: #fb8500 ;
+             border: 0;
+             background: linear-gradient(to right, #fb8500, #420142);
+            -webkit-background-clip: border-box;
+        }
+
+        .dropdown-menu :hover{
+             color: #fb8500;
+            background-color: #f5f5f5;
+        }
+
+        .active {
+            background-color: #fb8500;
+            border-radius: 7px;
+        }
+ /* start*/
+
+ * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        body {
+        background-image: url("images/artworks/slide3.jpg")!important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        opacity: 0.9;
+        z-index: -1;
+      }
+
+        .navbar-expand-lg {
+          background-color: #fefae0;
+          margin: 0;
+          padding: 0;
+        }
+
+        .container-fluid {
+          background-color: #edede9;
+         
+        }
+
+       
+        .navbar-collapse :hover {
+           color: #fb8500;
+           
+        }
+
+        .navbar-collapse :active {
+           color: #fb8500;
+           
+        }
+
+        btn-dark {
+          padding: 10;
+        }
+
+        .gap-2 :hover{
+             color: #181717;
+             background-color: #fb8500 ;
+             border: 0;
+        }
+
+        .dropdown-menu :hover{
+             color: #fb8500;
+            background-color: #f5f5f5;
+        }
+
+
+    .logo-slogan {
+        padding-top: 100px;
+        color: #420142;
+        width: 100%;
+
+}
+
+    
+    .login{
+        padding-left: 50px;
+        padding-top: 50px;
+        width: 100%;
+        height: auto;
+        color: #181717;
+    }
+
+    .form-group{
+        width: 300px;
+    }
+
+
+    .email-input{
+        margin-top: 15px;
+        width: 300px;
+        height: 50px;
+        top: 0.6rem;
+        left: 1.2rem;
+        color: #181717;
+        background-color: #edede9;
+        font-size: 15px;
+        transition: 0.4 all;
+        padding-inline: 0.65rem;
+        border-radius: 6px;
+        border: 1px solid;
+    }
+
+
+
+
+    .submit{
+        color: #edede9;
+        background-color: #420142;
+        margin-top: 15px;
+        margin-bottom: 50px;
+        width: 300px;
+        height: 50px;
+        border: 0;
+        border-radius: 6px;
+        font-weight: 500;
+
+    }
+
+    .submit2{
+        color: #181717;
+        background-color: #edede9;
+        margin-top: 15px;
+        margin-bottom: 8px;
+        width: 300px;
+        height: 50px;
+        border: 1px solid;
+        border-radius: 6px;
+        font-weight: 500;
+
+    }
+
+    input::placeholder {
+        color: #181717;
+        text-align: center;
+    }
+
+
+    .checkbox{
+        margin-top: 15px;
+    }
+
+    .label{
+        margin-top: 15px;
+    }
+
+    .logo-image img {
+        
+  width: 200px;
+  height: auto;
+}
+
+.logo-letter img {
+  width: 200px;
+  height: auto;
+}
+
+.password-text{
+    margin-top: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+    .logo-slogan {
+        margin-bottom: 50px;
+    }
+    .login {
+        margin-top: 50px;
+    }
+}
+ .slogan{
+margin: 25px;
+    font-family: 'Righteous', cursive;
+    background: linear-gradient(to right, #fb8500, #420142);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 20px;
+            font-weight: bold;
+ }
+
+ .forgot{
+    color: #fb8500;
+    margin-top: 15px;
+
+ }
+
+
+ .or-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.or-container hr {
+  width: 130px;
+  border: none;
+  border-bottom: 2px solid #000;
+}
+
+.or-container .or-text {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 16px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.facebook-login img {
+    color: #3b5998;
+  max-width: 30px;
+  margin-right: 40px;
+
+}
+
+.gmail-login img {
+
+    margin-top: 15px;
+  max-width: 30px;
+  margin-right: 40px;
+}
+
+.login-facebook{
+    text-decoration: none;
+    color: #3b5998;
+}
+.login-gmail{
+    text-decoration: none;
+    color: red;
+}
+
+.signup{
+    margin-top: 15px;
+    color: #fb8500;
+}
+
+.signup-link{
+    margin-left: 10px;
+    color: #fb8500;
+}
+
+.submit:hover{
+  color: #f5f5f5;
+             background-color: #fb8500 ;
+             border: 0;
+             background: linear-gradient(to right, #fb8500, #420142);
+            -webkit-background-clip: border-box;
+}
+   
+.signup{
+  color: #420142;
+}
+
+.terms{
+    color: #181717;
+}
+
+.logo-stuart img{
+    width: 150px;
+}
+
+.pay img{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+ margin-top: 10px;
+
+}
+
+.fee{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.card{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card2{
+  margin-top: 100px;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 2px rgba(0,0,0,.9);
+  border-radius: 50px;
+  background-color: #edede9;
+}
+
+.card3{
+  padding-top: 50px;
+  margin-top: 100px;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 2px rgba(0,0,0,.9);
+  border-radius: 10px;
+ background-color: #edede9;
+}
+
+.card4{
+  margin-top: 100px;
+  margin-bottom: 100px;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+ 
+  border-radius: 10px;
+
+}
+
+.clock{
+  margin-bottom: 50px;
+}
+
+
+.qrcode{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.card1 img{
+  margin-top: 200px;
+    margin-right: 100px;
+    width: 400px;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 2px rgba(0,0,0,.9);
+
+
+}
+
+.title-bid{
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.description{
+
+  text-align: center;
+}
+
+.artwork-bid{
+  margin-left:52px;
+}
+
+
+/* start of the style of clock*/
+
+
+.countdown-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+  margin: 2rem 0;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+.countdown-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  width: 5rem;
+  border: 3px solid #f1f1f1;
+  border-radius: 5px;
+  background: linear-gradient(to right, #fb8500, #420142);
+  -webkit-background-clip: border-box;
+  color: #edede9;
+  font-size: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.countdown-number:before,
+.countdown-number:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+
+.countdown-number:before {
+  height: 100%;
+  width: 100%;
+  background-color: #f1f1f1;
+  transform: rotateX(90deg) translateY(-100%);
+  transform-origin: top center;
+}
+
+.countdown-number:after {
+  height: 3px;
+  width: 100%;
+  background-color: #f1f1f1;
+  bottom: 0;
+  left: 0;
+}
+
+.countdown-label {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+
+
+.countdown-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.form-group {
+  margin: 1rem 0;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="number"] {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  width: 300px;
+  background-color: #edede9;
+  color: #181717;
+}
+
+button[type="submit"] {
+  font-size: 1.2rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.25rem;
+  border: none;
+  background-color: #420142;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #fb8500;
+}
+
+
+
+.starting-bid{
+  color: #fb8500;
+}
+
+.starting-bid-num{
+  color: #181717;
+}
+
+.card-bid{
+  text-align: center;
+
+}
+
+
+
+
+.highestbid{
+  font-size: 50px;
+  margin-bottom: 50px;
+  
+}
+
+.welcome{
+  margin-top: 50px;
+  text-align: center;
+  background: linear-gradient(to right, #fb8500, #420142);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+}
+      
+
+
+/* start */
+  /*   */ .foot-er {
+    margin-top: 300px;
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 50px;
+  background: linear-gradient(to right, #edede9, #fb8500, #edede9, #420142);
+            -webkit-background-clip: border-box;
+            color: #420142;
+    width: 100%;
+}
+
+.foot-er h3 {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.foot-er .para {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.foot-er img {
+  max-width: 200px;
+  margin-bottom: 20px;
+  margin-left: 100px;
+}
+
+.foot-er a {
+  display: block;
+  margin-bottom: 10px;
+  color: #420142;
+  text-decoration: none;
+}
+
+.foot-er a:hover {
+  color: #007bff;
+}
+
+        .logogo{
+margin-left: 30px;
+        }
+
+
+
+        /* For screens larger than 768px */
+@media (min-width: 768px) {
+  .foot-er {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .col-md-3 {
+    flex: 1;
+    margin-right: 30px;
+  }
+  .col-md-3:last-child {
+    margin-right: 0;
+  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .foot-er {
+    flex-direction: column;
+  }
+  .col-md-3 {
+    margin-bottom: 30px;
+  }
+}
+
+
+
+        
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          
+          <a class="navbar-brand" href="/index.html" onclick="window.location.reload(true);">
+            <img src="images/logo-removebg-preview.png" alt="Logo of Stuart Gallery" width="100"  class="d-inline-block align-text-top">
+            <img src="images/logoletter-removebg-preview-removebg-preview.png" alt="Logo in text" width="180" class="d-inline-block align-text-top" >
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="/index.html" onclick="window.location.reload(true);">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/bookavisit.html">BOOK A VISIT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/artworks/artworks.html">ARTWORKS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/exhibition/exhibition.html">EXHIBITION</a>
+              </li>
+              <li class="nav-item dropdown active">
+                <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  BIDDING
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/bidder.html">Join as Bidder</a></li>
+                  <li><a class="dropdown-item" href="/ringmen.html">Join as Ringmen</a></li>
+                
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/arscanner.html">AR SCANNER</a>
+              </li>
+            </ul>
+            <div class="d-flex gap-2 px-5">
+              <a href="/login.html">
+                <button type="button" class="btn btn-dark px-5" autocomplete="off">LOG IN</button>
+              </a>  
+              </div>
+
+          </div>
+          
+          
+        </div>
+      </nav>
+      <div class="welcome">
+        <h1 style="font-size: 60px; font-weight: bold;">WELCOME ART COLLECTORS!</h1>
+      </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card1">
+            <div class="card-body">
+                <img src="images/artworks/5.jpg" alt="artwork to bid" class="artwork-bid">
+           
+              <h4 class="title-bid">"Just the Two of Us 1"</h4>
+              <p class="description">30 x 24 inches<br>Oil on Canvas<br>Artist: Israel Acuna</p>
+
+            </div>
+          </div>
+        </div>
+
+
+        
+
+
+        <div class="col-md-6">
+          <div class="card2">
+            <div class="card-body">
+              <div class="login">
+                <div class="logo-stuart">
+                    <img src="images/logo-removebg-preview.png" alt="Logo of Stuart Gallery">
+                    <img src="images/logoletter-removebg-preview-removebg-preview.png" alt="Logo of Stuart Gallery">
+
+                </div>
+                <div class="pay">
+                    <div class="qrcode">
+                <img src="images/qr code.PNG" alt="Dummy QR Code of Website">
+            </div>
+            <div class="fee">
+                <h3>Scan QR Code first to pay</h3>
+                 <h4>Bidding Fee: P 100.00</h4>
+            </div>
+                </div>
+                <form id="login-form">
+                    <div class="form-group">
+                        <input class="email-input" type="email" id="email" placeholder="ENTER PAYMENT REFERENCE #">
+                        
+                    </div>
+        
+                      
+                    <input class="submit2" type="submit" value="ATTACH SCREENSHOT">
+                </form>
+
+                
+      <input class="email-input" type="number" id="inputText" min="1000" placeholder="Enter your Bid">
+        
+                   
+
+                <div class="form-group">
+                    <input class="checkbox" type="checkbox" id="checkbox">
+                    <label for="checkbox">Agree to</label><a href="#" class="terms">Terms and Conditions</a>
+                </div>
+                <button class="submit" onclick="displayInput()">SUBMIT</button>
+            </form>
+              
+        
+        </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          
+          <div class="card3">
+            <div class="card-bid">
+              <h3 class="starting-bid">STARTING BID</h3>
+              <h4 class="starting-bid-num">P 1000</h4>
+              <h1 style="font-weight: bold; color: #420142;">HIGHEST BID</h1>
+              <label class="highestbid" for="inputText">P <span id="displayArea">1000</span>:</label>
+              
+            </div>
+          </div>
+
+          <div class="col-md-12">
+          
+            <div class="card4">
+              <h1 class="welcome">BIDDING ENDS IN:</h1>
+              <div class="clock">
+                <div class="countdown-wrapper">
+                  <div class="countdown-item days">
+                    <div class="countdown-number">
+                      <span class="countdown-time">0</span>
+                    </div>
+                    <div class="countdown-label">Days</div>
+                  </div>
+                  <div class="countdown-item hours">
+                    <div class="countdown-number">
+                      <span class="countdown-time">0</span>
+                    </div>
+                    <div class="countdown-label">Hours</div>
+                  </div>
+                  <div class="countdown-item minutes">
+                    <div class="countdown-number">
+                      <span class="countdown-time">0</span>
+                    </div>
+                    <div class="countdown-label">Minutes</div>
+                  </div>
+                  <div class="countdown-item seconds">
+                    <div class="countdown-number">
+                      <span class="countdown-time">0</span>
+                    </div>
+                    <div class="countdown-label">Seconds</div>
+                  </div>
+                  <div class="countdown-item milliseconds">
+                    <div class="countdown-number">
+                      <span class="countdown-time">0</span>
+                    </div>
+                    <div class="countdown-label">Milliseconds</div>
+                  </div>
+                </div>
+                
+                <form class="countdown-form">
+                  <div class="form-group">
+                    <label for="date">Countdown Start Date:</label>
+                    <input type="date" name="date" id="date" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="time">Countdown Start Time:</label>
+                    <input type="time" name="time" id="time" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="days">Days:</label>
+                    <input type="number" name="days" id="days" min="0" max="999" value="0">
+                  </div>
+                  <div class="form-group">
+                    <label for="hours">Hours:</label>
+                    <input type="number" name="hours" id="hours" min="0" max="23" value="0">
+                  </div>
+                  <div class="form-group">
+                    <label for="minutes">Minutes:</label>
+                    <input type="number" name="minutes" id="minutes" min="0" max="59" value="0">
+                  </div>
+                  <div class="form-group">
+                    <label for="seconds">Seconds:</label>
+                    <input type="number" name="seconds" id="seconds" min="0" max="59" value="0">
+                  </div>
+                  <button type="submit">Start Countdown</button>
+                </form>
+              
+              </div>
+            </div>
+  
+
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+    <div class="foot-er">
+      <div class="col-md-3">
+      <img src="images/logo-removebg-preview.png" alt="Logo of Stuart Gallery" class="logogo">
+        <img src="images/logoletter-removebg-preview-removebg-preview.png" alt="Logo of Stuart Gallery" class="logogo">
+      </div>
+
+      <div class="col-md-3">
+        <h3>About</h3>
+        <p class="para">Stuart Gallery is a leading art gallery that features exquisite artworks from renowed and amateur artist all over the region.</p>
+        <h3>Developers - BSIT-3B</h3>
+        <a href="https://www.facebook.com/lyron.cruz/" class="para">Lyron Manlong Cruz</a>
+        <a href="https://www.facebook.com/Chirstian.Gonzales14" class="para">John Christian D.R. Gonzales</a>
+        <a href="https://www.facebook.com/ejhijastro" class="para">Edlyn Joyce Hijastro</a>
+        <a href="https://www.facebook.com/leannahfaith" class="para">Leannah Faith Redondo</a>
+      </div>
+      <div class="col-md-3">
+        <h3>Social Media Links</h3>
+        <a href="https://www.facebook.com/stuartgalleryph" class="home">Facebook</a>
+        <a href="https://www.facebook.com/stuartgalleryph" class="home">Instagram</a>
+        <a href="https://www.facebook.com/stuartgalleryph" class="home">Youtube</a><br>
+        <H3>Quick Links</H3>
+        <a href="/index.html" class="home">Home</a>
+        <a href="/bookavisit.html" class="home">Book a visit</a>
+        <a href="/artworks/artworks.html" class="home">Artworks</a>
+        <a href="/exhibition/exhibition.html" class="home">Exhibition</a>
+        <a href="/bidder.html" class="home">Bidding</a>
+        <a href="/arscanner.html" class="home">Ar Scanner</a>
+      </div>
+      <div class="col-md-3">
+        <h3>Contact Us</h3>
+        <p class="para">2nd Floor Commercial <br>Building 2 Capitol Compund <br> Malolos City, Bulacan</p>
+
+        <div class="disclaimer"></div>
+    <div class="col-md-12">
+      <h3>© Stuart Gallery All Rights Reserved 2023</h3>
+      <p class="para">Disclaimer: All the information above is only use as requirements in the Subject web development II and will not use for commercial and economic purposes</p>
+    </div>
+      </div>
+
+      
+
+      
+    </div>
+    <script>
+      function displayInput() {
+      var userInput = parseInt(document.getElementById("inputText").value);
+      var currentVal = parseInt(document.getElementById("displayArea").innerHTML);
+      
+      if (userInput > currentVal) {
+        document.getElementById("displayArea").innerHTML = userInput;
+      } else {
+        alert("Please enter a number greater than " + currentVal);
+      }
+    }
+
+    //start of the script of the clock ahahahaha
+
+      // Get the countdown elements 
+var daysElement = document.querySelector(".days .countdown-time");
+var hoursElement = document.querySelector(".hours .countdown-time");
+var minutesElement = document.querySelector(".minutes .countdown-time");
+var secondsElement = document.querySelector(".seconds .countdown-time");
+var millisecondsElement = document.querySelector(".milliseconds .countdown-time");
+
+// Get the countdown form and input fields
+var countdownForm = document.querySelector(".countdown-form");
+var daysInput = document.querySelector(".countdown-form input[name=days]");
+var hoursInput = document.querySelector(".countdown-form input[name=hours]");
+var minutesInput = document.querySelector(".countdown-form input[name=minutes]");
+var secondsInput = document.querySelector(".countdown-form input[name=seconds]");
+var datePickerInput = document.querySelector(".countdown-form input[name=date]");
+var timePickerInput = document.querySelector(".countdown-form input[name=time]");
+
+// When the countdown form is submitted
+countdownForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  // Get the countdown start date and time
+  var countdownStartDate = new Date(datePickerInput.value + "T" + timePickerInput.value).getTime();
+
+  // Get the countdown time
+  var days = parseInt(daysInput.value) || 0;
+  var hours = parseInt(hoursInput.value) || 0;
+  var minutes = parseInt(minutesInput.value) || 0;
+  var seconds = parseInt(secondsInput.value) || 0;
+
+  // Calculate the countdown end date and time
+  var countdownEndDate = countdownStartDate + ((days * 24 + hours) * 60 + minutes) * 60 * 1000 + seconds * 1000;
+
+  // Update the countdown every 1 millisecond
+  var countdownInterval = setInterval(function() {
+
+    // Get the current date and time
+    var now = new Date().getTime();
+
+    // Calculate the time remaining
+    var timeRemaining = countdownEndDate - now;
+
+    // Calculate days, hours, minutes, seconds, and milliseconds remaining
+    var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+    var milliseconds = Math.floor(timeRemaining % 1000);
+
+    // Update the countdown display
+    daysElement.innerHTML = days;
+    hoursElement.innerHTML = hours;
+    minutesElement.innerHTML = minutes;
+    secondsElement.innerHTML = seconds;
+    millisecondsElement.innerHTML = milliseconds;
+
+    // If the count down is finished, display a message
+    if (timeRemaining < 0) {
+      clearInterval(countdownInterval);
+      daysElement.innerHTML = 0;
+      hoursElement.innerHTML = 0;
+      minutesElement.innerHTML = 0;
+      secondsElement.innerHTML = 0;
+      millisecondsElement.innerHTML = 0;
+      alert("Countdown has ended!");
+    }
+  }, 1);
+});
+    </script>
+</body>
+</html>

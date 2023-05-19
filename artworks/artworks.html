@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/logo-removebg-preview.png">
+
+    <title>Artworks - Stuart Gallery</title>
+
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+        background-image: url("images/artworks/slide3.jpg")!important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        opacity: 0.9;
+        z-index: -1;
+      }
+
+        .navbar-expand-lg {
+          background-color: #fefae0;
+          margin: 0;
+          padding: 0;
+        }
+
+        .container-fluid {
+          background-color: #edede9;
+         
+        }
+
+        .navbar-collapse :hover {
+           color: #fb8500;
+           
+        }
+
+        .navbar-collapse :active {
+           color: #fb8500;
+           
+        }
+
+        .btn-log {
+          padding-top: 8px;
+          padding-bottom: 8px;
+          background-color: #181717;
+          color: #fefae0;
+          border-radius: 7px;
+          border: 0;
+        }
+
+        .btn-log:hover{
+          border: 0;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          border-radius: 7px;
+
+        }
+
+
+        .gap-2 :hover{
+          color: #f5f5f5;
+             background-color: #fb8500 ;
+             border: 0;
+             background: linear-gradient(to right, #fb8500, #420142);
+            -webkit-background-clip: border-box;
+             padding-top: 3px;
+          padding-bottom: 3px;
+          border-radius: 7px;
+        }
+
+        .dropdown-menu :hover{
+             color: #fb8500;
+            background-color: #f5f5f5;
+        }
+
+        .active {
+            background-color: #fb8500;
+            border-radius: 7px;
+        }
+
+
+        .body-container{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 30px;
+
+    }
+
+    .card-img-top {
+        height: 300px;
+  
+    }
+
+    .card-body {
+        text-align: center;
+        color: #884f1c;
+    }
+
+    .card-title:hover{
+      color: #420142;
+      
+    }
+
+    .card-text{
+      margin: 0;
+      padding: 0;
+    }
+
+    .btn{
+      margin-top: 20px;
+      color: #fefae0;
+      background: #884f1c;
+      border: none;
+    }
+
+    .btn:hover{
+      background-color: #420142;
+      color: #fefae0;
+    }
+
+    .card-img-top:hover{
+      opacity: .5;
+      
+    }
+
+    .card-title{
+      color: #884f1c;
+    }
+
+    /* Media queries for different device sizes */
+
+    @media (max-width: 992px) {
+      .body-container{
+        flex-wrap: wrap;
+      }
+
+      .card{
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .card{
+        width: 100%;
+      }
+
+      .card-img-top {
+        height: auto;
+      }
+    }
+
+    .slogan{
+      margin-top: 20px;
+      color: #420142;
+      justify-content: center;
+      
+    }
+
+    .artist{
+      color: #fb8500;
+    }
+
+    .artist:hover{
+      color: #420142;
+    }
+
+
+    /* start */
+  /*   */ .foot-er {
+    margin-top: 100px;
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 50px;
+  background: linear-gradient(to right, #edede9, #fb8500, #edede9, #420142);
+            -webkit-background-clip: border-box;
+            color: #420142;
+}
+
+.foot-er h3 {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.foot-er .para {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.foot-er img {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.foot-er a {
+  display: block;
+  margin-bottom: 10px;
+  color: #420142;
+  text-decoration: none;
+}
+
+.foot-er a:hover {
+  color: #007bff;
+}
+
+        .logogo{
+margin-left: 30px;
+        }
+
+
+
+        
+
+        /* For screens larger than 768px */
+@media (min-width: 768px) {
+  .foot-er {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .col-md-3 {
+    flex: 1;
+    margin-right: 30px;
+  }
+  .col-md-3:last-child {
+    margin-right: 0;
+  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .foot-er {
+    flex-direction: column;
+  }
+  .col-md-3 {
+    margin-bottom: 30px;
+  }
+}
+        
+
+        
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          
+          <a class="navbar-brand" href="/index.html" onclick="window.location.reload(true);">
+            <img src="images/logo-removebg-preview.png" alt="Logo of Stuart Gallery" width="100"  class="d-inline-block align-text-top">
+            <img src="images/logoletter-removebg-preview-removebg-preview.png" alt="Logo in text" width="180" class="d-inline-block align-text-top" >
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="/index.html" onclick="window.location.reload(true);">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/bookavisit.html">BOOK A VISIT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/artworks/artworks.html">ARTWORKS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/exhibition/exhibition.html">EXHIBITION</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  BIDDING
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/bidder.html">Join as Bidder</a></li>
+                  <li><a class="dropdown-item" href="/ringmen.html">Join as Ringmen</a></li>
+                
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/arscanner.html">AR SCANNER</a>
+              </li>
+            </ul>
+            <div class="d-flex gap-2 px-5">
+              <a href="/login.html">
+                <button type="button" class="btn-log btn-dark px-5" autocomplete="off">LOG IN</button>
+              </a>  
+              </div>
+
+          </div>
+          
+          
+        </div>
+      </nav>
+      <div class="slogan d-flex flex-column justify-content-center align-items-center">
+        <div class="text-div text-center">
+          <h1 class="text">Collect Artworks With Stuart Gallery ArtShop</h1>
+        </div>
+        <div class="feature-artist text-center">
+          <p>Artist of The Month: <a href="#" class="artist">Mr. Wo Dela Cruz</a></p>
+        </div>
+      </div>
+
+      <div class="body-container">
+        <div class="card" style="width: 18rem;">
+          <a href="firstart.html">
+            <img src="images/artworks/1.jpg" class="card-img-top" alt="Painting called Before the best thing happens by Wo Dela Cruz">
+          </a>
+            <div class="card-body">
+              <a href="firstart.html">
+              <p class="card-title "><u><strong> THE BEST THINGS HAPPEN</strong></u></P> 
+              </a>           
+              <p class="card-text">Artist: Mr. Wo Dela Cruz<br>Canvas Size: 4 x 5 FT.<br>
+              Mix Medium</p>
+              <p class="card-prize"><strong>P 6,789.00</strong> </p>
+              <a href="firstart.html" class="btn px-5">BUY</a>
+            </div>
+          </div>
+    
+          <div class="card" style="width: 18rem;">
+            <a href="secondart.html">
+            <img src="images/artworks/2.jpg" class="card-img-top" alt="Painting called Evade by Wo Dela Cruz">
+            <div class="card-body">
+              <p class="card-title "><u><strong>EVADE</strong></u></P>
+              </a>
+                <p class="card-text">Artist: Mr. Wo Dela Cruz<br>Canvas Size: 15.7 x 15.7 FT.<br>
+                 Acrylic on canvas</p>
+              <p class="card-prize"><strong>P 1,234.00</strong></p>
+              <a href="secondart.html" class="btn px-5">BUY</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <a href="thirdart.html">
+            <img src="images/artworks/3.jpg" class="card-img-top" alt="Painting called Abort by Wo Dela Cruz">
+            <div class="card-body">
+              <p class="card-title "><u><strong>ABORT</strong></u></P>
+              </a>
+              <p class="card-text">Artist: Mr. Wo Dela Cruz<br>Canvas Size: 15.7 x 15.7 FT.<br>
+                Acrylic on canvas</p>
+                <p class="card-prize"><strong>P 9,123.00</strong></p>
+              <a href="thirdart.html" class="btn px-5">BUY</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <a href="fourthaaart.html">
+            <img src="images/artworks/4.jpg" class="card-img-top" alt="Painting called Who's Good, Who's Bad by Wo Dela Cruz">
+            <div class="card-body">
+              <p class="card-title"><u><strong>WHO'S GOOD, WHO'S BAD</strong></u></p>
+            </a>
+              <p class="card-text">Artist: Mr. Wo Dela Cruz<br>Canvas Size: 15.7 x 15.7 FT.<br>
+                Acrylic on canvas</p>
+                <p class="card-prize"><strong>P 5,432.00</strong></p>
+              <a href="fourthaaart.html" class="btn px-5">BUY</a>
+            </div>
+          </div>
+        </div>
+    
+
+
+
+        <div class="body-container">
+          <div class="card" style="width: 18rem;">
+            <a href="firstart.html">
+              <img src="images/artworks/1.jpg" class="card-img-top" alt="Painting called Before the best thing happens by Wo Dela Cruz">
+            </a>
+              <div class="card-body">
+                <a href="firstart.html">
+                <p class="card-title "><u><strong> THE BEST THINGS HAPPEN</strong></u></P> 
+                </a>           
+                <p class="card-text">Artist: Mr. Wo Dela Cruz<br>Canvas Size: 4 x 5 FT.<br>
+                Mix Medium</p>
+                <p class="card-prize"><strong>P 6,789.00</strong> </p>
+                <a href="firstart.html" class="btn px-5">BUY</a>
+              </div>
+            </div>
+      
+            <div class="card" style="width: 18rem;">
+              <a href="secondart.html">
+              <img src="images/artworks/2.jpg" class="card-img-top" alt="Painting called Evade by Wo Dela Cruz">
+              <div class="card-body">
+                <p class="card-title "><u><strong>EVADE</strong></u></P>
+                </a>
+                  <p class="card-text">Artist: Mr. Wo Dela Cruz<br>Canvas Size: 15.7 x 15.7 FT.<br>
+                   Acrylic on canvas</p>
+                <p class="card-prize"><strong>P 1,234.00</strong></p>
+                <a href="secondart.html" class="btn px-5">BUY</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <a href="thirdart.html">
+              <img src="images/artworks/3.jpg" class="card-img-top" alt="Painting called Abort by Wo Dela Cruz">
+              <div class="card-body">
+                <p class="card-title "><u><strong>ABORT</strong></u></P>
+                </a>
+                <p class="card-text">Artist: Mr. Wo Dela Cruz<br>Canvas Size: 15.7 x 15.7 FT.<br>
+                  Acrylic on canvas</p>
+                  <p class="card-prize"><strong>P 9,123.00</strong></p>
+                <a href="thirdart.html" class="btn px-5">BUY</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <a href="fourthaaart.html">
+              <img src="images/artworks/4.jpg" class="card-img-top" alt="Painting called Who's Good, Who's Bad by Wo Dela Cruz">
+              <div class="card-body">
+                <p class="card-title"><u><strong>WHO'S GOOD, WHO'S BAD</strong></u></p>
+              </a>
+                <p class="card-text">Artist: Mr. Wo Dela Cruz<br>Canvas Size: 15.7 x 15.7 FT.<br>
+                  Acrylic on canvas</p>
+                  <p class="card-prize"><strong>P 5,432.00</strong></p>
+                <a href="fourthaaart.html" class="btn px-5">BUY</a>
+              </div>
+            </div>
+          </div>
+    
+          
+
+
+          <div class="body-container">
+            <div class="card" style="width: 18rem;">
+              <a href="firstart.html">
+                <img src="images/artworks/1.jpg" class="card-img-top" alt="Painting called Before the best thing happens by Wo Dela Cruz">
+              </a>
+                <div class="card-body">
+                  <a href="firstart.html">
+                  <p class="card-title "><u><strong> THE BEST THINGS HAPPEN</strong></u></P> 
+                  </a>           
+                  <p class="card-text">Artist: Mr. Wo Dela Cruz<br>Canvas Size: 4 x 5 FT.<br>
+                  Mix Medium</p>
+                  <p class="card-prize"><strong>P 6,789.00</strong> </p>
+                  <a href="firstart.html" class="btn px-5">BUY</a>
+                </div>
+              </div>
+        
+              <div class="card" style="width: 18rem;">
+                <a href="secondart.html">
+                <img src="images/artworks/2.jpg" class="card-img-top" alt="Painting called Evade by Wo Dela Cruz">
+                <div class="card-body">
+                  <p class="card-title "><u><strong>EVADE</strong></u></P>
+                  </a>
+                    <p class="card-text">Artist: Mr. Wo Dela Cruz<br>Canvas Size: 15.7 x 15.7 FT.<br>
+                     Acrylic on canvas</p>
+                  <p class="card-prize"><strong>P 1,234.00</strong></p>
+                  <a href="secondart.html" class="btn px-5">BUY</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <a href="thirdart.html">
+                <img src="images/artworks/3.jpg" class="card-img-top" alt="Painting called Abort by Wo Dela Cruz">
+                <div class="card-body">
+                  <p class="card-title "><u><strong>ABORT</strong></u></P>
+                  </a>
+                  <p class="card-text">Artist: Mr. Wo Dela Cruz<br>Canvas Size: 15.7 x 15.7 FT.<br>
+                    Acrylic on canvas</p>
+                    <p class="card-prize"><strong>P 9,123.00</strong></p>
+                  <a href="thirdart.html" class="btn px-5">BUY</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <a href="fourthaaart.html">
+                <img src="images/artworks/4.jpg" class="card-img-top" alt="Painting called Who's Good, Who's Bad by Wo Dela Cruz">
+                <div class="card-body">
+                  <p class="card-title"><u><strong>WHO'S GOOD, WHO'S BAD</strong></u></p>
+                </a>
+                  <p class="card-text">Artist: Mr. Wo Dela Cruz<br>Canvas Size: 15.7 x 15.7 FT.<br>
+                    Acrylic on canvas</p>
+                    <p class="card-prize"><strong>P 5,432.00</strong></p>
+                  <a href="fourthaaart.html" class="btn px-5">BUY</a>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="foot-er">
+              <div class="col-md-3">
+              <img src="images/logo-removebg-preview.png" alt="Logo of Stuart Gallery" class="logogo">
+                <img src="images/logoletter-removebg-preview-removebg-preview.png" alt="Logo of Stuart Gallery" class="logogo">
+              </div>
+      
+              <div class="col-md-3">
+                <h3>About</h3>
+                <p class="para">Stuart Gallery is a leading art gallery that features exquisite artworks from renowed and amateur artist all over the region.</p>
+                <h3>Developers - BSIT-3B</h3>
+                <a href="https://www.facebook.com/lyron.cruz/" class="para">Lyron Manlong Cruz</a>
+                <a href="https://www.facebook.com/Chirstian.Gonzales14" class="para">John Christian D.R. Gonzales</a>
+                <a href="https://www.facebook.com/ejhijastro" class="para">Edlyn Joyce Hijastro</a>
+                <a href="https://www.facebook.com/leannahfaith" class="para">Leannah Faith Redondo</a>
+              </div>
+              <div class="col-md-3">
+                <h3>Social Media Links</h3>
+                <a href="https://www.facebook.com/stuartgalleryph" class="home">Facebook</a>
+                <a href="https://www.facebook.com/stuartgalleryph" class="home">Instagram</a>
+                <a href="https://www.facebook.com/stuartgalleryph" class="home">Youtube</a><br>
+                <H3>Quick Links</H3>
+                <a href="/index.html" class="home">Home</a>
+                <a href="/bookavisit.html" class="home">Book a visit</a>
+                <a href="/artworks/artworks.html" class="home">Artworks</a>
+                <a href="/exhibition/exhibition.html" class="home">Exhibition</a>
+                <a href="/bidder.html" class="home">Bidding</a>
+                <a href="/arscanner.html" class="home">Ar Scanner</a>
+              </div>
+              <div class="col-md-3">
+                <h3>Contact Us</h3>
+                <p class="para">2nd Floor Commercial <br>Building 2 Capitol Compund <br> Malolos City, Bulacan</p>
+                <div class="disclaimer"></div>
+              <div class="col-md-12">
+                <h3>© Stuart Gallery All Rights Reserved 2023</h3>
+                <p class="para">Disclaimer: All the information above is only use as requirements in the Subject web development II and will not use for commercial and economic purposes</p>
+              </div>
+              </div>
+            </div>
+            
+        
+
+    
+</body>
+</html>

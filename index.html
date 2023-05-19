@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/logo-removebg-preview.png">
+
+    <title>Home - Stuart Gallery</title>
+
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        body {
+        background-image: url("images/artworks/slide3.jpg")!important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        opacity: 0.9;
+        z-index: -1;
+      }
+
+        .navbar-expand-lg {
+          background-color: #fefae0;
+          margin: 0;
+          padding: 0;
+          
+        }
+
+        .container-fluid {
+          background-color: #edede9;
+          justify-content: space-evenly;
+        }
+
+        .navbar-collapse :hover {
+           color: #fb8500;
+           
+        }
+
+        .navbar-collapse :active {
+           color: #fb8500;
+           
+        }
+
+        btn-dark {
+          padding: 10;
+        }
+
+        .gap-2 :hover{
+             color: #f5f5f5;
+             background-color: #fb8500 ;
+             border: 0;
+             background: linear-gradient(to right, #fb8500, #420142);
+            -webkit-background-clip: border-box;
+
+        }
+
+        .dropdown-menu :hover{
+             color: #fb8500;
+            background-color: #f5f5f5;
+        }
+
+        .active {
+            background-color: #fb8500;
+            border-radius: 7px;
+        }
+
+        .carousel-item{
+      height: 32rem;
+      width: 100%;
+      background-color: #777;
+      color: white;
+      position: relative;
+    }
+
+    .container{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding-left: 10px;
+      padding-bottom: 50px;
+    }
+
+      .carousel-caption{
+        color: #edede9;
+        margin: 0;
+        padding-left: 0;
+
+      }
+
+/* start */
+  /*   */ .foot-er {
+    margin-top: 100px;
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 50px;
+  background: linear-gradient(to right, #edede9, #fb8500, #edede9, #420142);
+            -webkit-background-clip: border-box;
+            color: #420142;
+}
+
+.foot-er h3 {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.foot-er .para {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.foot-er img {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.foot-er a {
+  display: block;
+  margin-bottom: 10px;
+  color: #420142;
+  text-decoration: none;
+}
+
+.foot-er a:hover {
+  color: #007bff;
+}
+
+        .logogo{
+margin-left: 30px;
+        }
+
+
+
+    
+@media (min-width: 768px) {
+  .foot-er {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .col-md-3 {
+    flex: 1;
+    margin-right: 30px;
+  }
+  .col-md-3:last-child {
+    margin-right: 0;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .foot-er {
+    flex-direction: column;
+  }
+  .col-md-3 {
+    margin-bottom: 30px;
+  }
+}
+
+.card{
+   width: 600px;
+   background: linear-gradient(to right,  #fb8500, #edede9);
+            -webkit-background-clip: border-box;
+color: #420142;
+}
+
+
+.card-img-top{
+
+}
+
+
+.card-columns {
+  column-count: 2;
+  column-gap: 1rem;
+
+}
+
+.card {
+  margin-bottom: 1rem;
+  margin-top: 100px;
+}
+
+
+@media (min-width: 576px) {
+  .card-columns {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-columns {
+    column-count: 4;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-columns {
+    column-count: 5;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-columns {
+    column-count: 6;
+  }
+}
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1 0 48%;
+  margin-top: 100px;
+
+}
+
+.card-1 {
+  flex: 1 0 48%;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+.developers{
+  text-align: center;
+  display: flex;
+  
+margin-left: 30px;
+        margin-top: 30px;
+        width: 480px;
+
+        
+}
+
+.title-dev{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+ color: #edede9;
+  background: linear-gradient(to right,  #fb8500, #420142);
+            -webkit-background-clip: border-box;
+  font-size: 50px;
+}
+
+.card-img-top{
+  border-radius: 50%;
+}
+
+.card-text{
+  margin-top: 20px;
+}
+
+.card-body{
+  margin-top: 20px;
+  background: linear-gradient(to right,  #fb8500, #420142);
+            -webkit-background-clip: text;
+}
+        
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          
+          <a class="navbar-brand" href="/index.html" onclick="window.location.reload(true);">
+            <img src="images/logo-removebg-preview.png" alt="Logo of Stuart Gallery" width="100"  class="d-inline-block align-text-top">
+            <img src="images/logoletter-removebg-preview-removebg-preview.png" alt="Logo in text" width="180" class="d-inline-block align-text-top" >
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/index.html" onclick="window.location.reload(true);">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/bookavisit.html">BOOK A VISIT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="artworks/artworks.html">ARTWORKS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="exhibition/exhibition.html">EXHIBITION</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  BIDDING
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/bidder.html">Join as Bidder</a></li>
+                  <li><a class="dropdown-item" href="/ringmen.html">Join as Ringmen</a></li>
+                
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="arscanner.html">AR SCANNER</a>
+              </li>
+            </ul>
+            <div class="d-flex gap-2 px-5">
+              <a href="login.html">
+                <button type="button" class="btn btn-dark px-5" autocomplete="off">LOG IN</button>
+              </a>  
+              </div>
+
+          </div>
+          
+          
+        </div>
+      </nav>
+
+
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <video src="video/Stuart Gallery - Robot Starts to Think.mp4" class="d-block w-100" alt="..." autoplay muted loop></video>
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Stuart Gallery</h1>
+              <p>Bulacan's rapidly growing art market, bridging genres, promoting collaborations, and art appreciation.</p>
+            </div>
+          </div>
+          <div class="carousel-item"> 
+            <img src="images/artworks/slide1.jpg" class="d-block w-100" alt="...">
+            
+            <div class="carousel-caption d-none d-md-block">
+              <h1>ESTorya</h1>
+              <p>April 29 - May 12, 2023</p>
+            </div>
+          </div>
+          
+          <div class="carousel-item">
+            <img src="images/artworks/slide3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Love Language</h1>
+              <p>February 4-17, 2023</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="card-container">
+        <div class="card mb-3">
+          <img src="images/card1.jpg" class="card-img-top1" alt="Stuart Gallery Photo">
+          <div class="card-body">
+            <h1 class="card-title">Stuart Gallery</h1>
+            <p class="card-text">"Our gallery is truly a feast for the senses. Each piece of art is a masterpiece that speaks to the soul and captivates the imagination. Thank you for sharing such beauty with the world."</p>
+            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body" style="margin-top: 20px;">
+            <h1 class="card-title">BULACAN ART COMMUNITY</h1>
+            <p class="card-text">"Art is a language that transcends borders, allowing us to communicate and connect with others from all walks of life."</p>
+            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+          </div>
+          <img src="images/card2.jpg" class="card-img-bottom" alt="Stuart Gallery Photo">
+        </div>
+      </div>
+
+
+      <div class="title-dev">
+        <h1 class="title-dev">THE DEVELOPERS & CREATORS</h1></div>
+
+<div class="developers">
+  
+      <div class="card-1 col-md-3" style="width: 18rem;">
+        <img src="images/lyronprofile.jpg" class="card-img-top" alt="Developers Picture">
+        <div class="card-body">
+          <h4>Lyron Manlong Cruz </h4>
+           <h5> Front-end Developer</h5>
+          <p class="card-text">"The art community is a place where we can learn, grow, and thrive, surrounded by a supportive and creative network of individuals."</p>
+        </div>
+      </div>
+
+
+            <div class="card-1 col-md-3" style="width: 18rem;">
+              <img src="images/christianprofile.jpg" class="card-img-top" alt="Developers Picture">
+              <div class="card-body">
+                <h4>John Christian Delos Reyes Gonzales</h4>
+                 <h5> Front-end Developer </h5>
+                <p class="card-text">"Through art, we can express our deepest fears, hopes, and dreams, giving voice to our inner selves."</p>
+              </div>
+            </div>
+
+            <div class="card-1 col-md-3" style="width: 18rem;">
+              <img src="images/joyceprofile.jpg" class="card-img-top" alt="Developers Picture">
+              <div class="card-body">
+                <h4>Edlyn Joyce Hijastro</h4>
+                 <h5>Developer and Graphic Designer</h5>
+                <p class="card-text">"The art community is a place where we can find our tribe, a group of like-minded individuals who share our values and passions."</p>
+              </div>
+            </div>
+
+            <div class="card-1 col-md-3" style="width: 18rem;">
+              <img src="images/profile.png" class="card-img-top" alt="Developers Picture">
+              <div class="card-body">
+                <h4>Leanna Faith Redondo</h4>
+                 <h5> Developer</h5>
+                <p class="card-text">"Artists are the visionaries of our time, dreaming up new ideas and inspiring us to think differently."</p>
+              </div>
+            </div>
+
+            
+            
+      
+
+
+    </div>
+      
+
+
+
+
+
+
+      <div class="foot-er">
+        <div class="col-md-3">
+        <img src="images/logo-removebg-preview.png" alt="Logo of Stuart Gallery" class="logogo">
+          <img src="images/logoletter-removebg-preview-removebg-preview.png" alt="Logo of Stuart Gallery" class="logogo">
+        </div>
+
+        <div class="col-md-3">
+          <h3>About</h3>
+          <p class="para">Stuart Gallery is a leading art gallery that features exquisite artworks from renowed and amateur artist all over the region.</p>
+          <h3>Developers - BSIT-3B</h3>
+          <a href="https://www.facebook.com/lyron.cruz/" class="para">Lyron Manlong Cruz</a>
+          <a href="https://www.facebook.com/Chirstian.Gonzales14" class="para">John Christian D.R. Gonzales</a>
+          <a href="https://www.facebook.com/ejhijastro" class="para">Edlyn Joyce Hijastro</a>
+          <a href="https://www.facebook.com/leannahfaith" class="para">Leannah Faith Redondo</a>
+        </div>
+        <div class="col-md-3">
+          <h3>Social Media Links</h3>
+          <a href="https://www.facebook.com/stuartgalleryph" class="home">Facebook</a>
+          <a href="https://www.facebook.com/stuartgalleryph" class="home">Instagram</a>
+          <a href="https://www.facebook.com/stuartgalleryph" class="home">Youtube</a><br>
+          <H3>Quick Links</H3>
+          <a href="/index.html" class="home">Home</a>
+          <a href="/bookavisit.html" class="home">Book a visit</a>
+          <a href="/artworks/artworks.html" class="home">Artworks</a>
+          <a href="/exhibition/exhibition.html" class="home">Exhibition</a>
+          <a href="/bidder.html" class="home">Bidding</a>
+          <a href="/arscanner.html" class="home">Ar Scanner</a>
+        </div>
+        <div class="col-md-3">
+          <h3>Contact Us</h3>
+          <p class="para">2nd Floor Commercial <br>Building 2 Capitol Compund <br> Malolos City, Bulacan</p>
+          <div class="disclaimer"></div>
+        <div class="col-md-12">
+          <h3>© Stuart Gallery All Rights Reserved 2023</h3>
+          <p class="para">Disclaimer: All the information above is only use as requirements in the Subject web development II and will not use for commercial and economic purposes</p>
+        </div>
+        </div>
+      </div>
+
+      
+      
+
+
+
+
+
+
+      
+      
+</body>
+</html>
